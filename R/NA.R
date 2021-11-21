@@ -1,7 +1,6 @@
 #' COUNTNA Function
 #'
 #' This function goes through the whole data set, counts NA's and #'returns back a visualization as a bar plot if NA's are present. #'This is very useful #' when working with an untidy data frame to #'first see how many NAs and which variables have the missing data
-#'
 #' @param  data tibble or data frame that you want use to test for missing NA's
 #' @return a bar graph of {data} will plotted NA's or a message indicating no NA'
 #' @examples
