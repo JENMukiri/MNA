@@ -8,7 +8,6 @@
 #' countna(datateachr::apt_buildings)
 #' @export
 
-if(getRversion() >= "2.15.1")  utils::globalVariables(c("variable","count","where"))
 countna <-  function(data){
   data1 <- dplyr::summarise(data, dplyr::across(dplyr::everything(),
                                   ~sum(is.na(.))))
@@ -20,7 +19,7 @@ countna <-  function(data){
   data1 %>%
     dplyr::select(where(~ sum(.) != 0)) %>%
     tidyr::pivot_longer(cols= dplyr::everything(), names_to = "variable",     values_to = "count")%>%  #transpose  data so it easier to plot w
-    ggplot2::ggplot(ggplot2::aes(forcats::fct_reorder(variable),count)) + #bar graph are a good way to visualize this data
+    ggplot2::ggplot(ggplot2::aes(forcats::fct_reorder(variable,count),count)) + #bar graph are a good way to visualize this data
     ggplot2::geom_bar(stat = "identity")+
     ggplot2::labs(title="Variables with missing NA values",
          y="Number of NAs",

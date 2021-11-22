@@ -28,5 +28,7 @@ This is a basic example which shows you how to solve a common problem:
 library(MNA)
 
 ## basic example code
-#countna(datateachr::vancouver_trees)
+countna(datateachr::vancouver_trees)
 ```
+
+<img src="man/figures/README-example-1.png" width="100%" />
