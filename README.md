@@ -22,7 +22,8 @@ devtools::install_github("JENMukiri/mna")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to visualize NAs in a
+packge:
 
 ``` r
 library(MNA)
